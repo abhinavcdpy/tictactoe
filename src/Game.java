@@ -5,6 +5,8 @@ public class Game {
         Player curPlayer = player1;
         Scanner scanner = new Scanner(System.in);
 
+        board.printBoard();
+
         while(true) {
             int i, j;
             do {

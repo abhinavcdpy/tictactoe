@@ -12,13 +12,18 @@ public class Main {
         Player player1 = new Player(player1Name, 'X');
         Player player2 = new Player(player2Name, 'O');
 
+        Board board = null;
         while(true) {
             Game game = new Game();
             try {
                 System.out.println("Enter board size");
                 int boardSize = scanner.nextInt();
 
-                Board board = new Board(boardSize);
+                if(board==null) {
+                    board = new Board(boardSize);
+                } else{
+                    board.reset(boardSize);
+                }
 
                 game.startGame(player1, player2, board);
 

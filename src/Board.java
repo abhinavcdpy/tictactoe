@@ -15,20 +15,7 @@ public class Board {
     int oBDiagonalCount;
 
     public Board(int size) {
-        this.size = size;
-        board = new char[size][size];
-//        for (int i = 0; i < size; i++) {
-//            for (int j = 0; j < size; j++) {
-//                board[i][j] = '.';
-//            }
-//        }
-
-        xRowCount = new int[size];
-        oRowCount = new int[size];
-        xColCount = new int[size];
-        oColCount = new int[size];
-        xFDiagonalCount = 0;
-        oFDiagonalCount = 0;
+        this.reset(size);
     }
 
     public void reset(int size) {

@@ -59,14 +59,14 @@ public class Board {
             xColCount[j]++;
 
             if(i==j) xFDiagonalCount++;
-            if(i+j==size) xBDiagonalCount++;
+            if(i+j==size-1) xBDiagonalCount++;
         }
         if(marker == 'O') {
             oRowCount[i]++;
             oColCount[j]++;
 
             if(i==j) oFDiagonalCount++;
-            if(i+j==size) oBDiagonalCount++;
+            if(i+j==size-1) oBDiagonalCount++;
         }
         return true;
     }
